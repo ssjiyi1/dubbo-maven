@@ -10,7 +10,7 @@
         <module>dubbo-entity</module>
         <module>dubbo-dao</module>
         <module>dubbo-service</module>
-        <module>dubbo-utils</module>
+        <module>dubbo-common</module>
         <module>dubbo-web</module>
         <module>dubbo-facade-student</module>
     </modules>
