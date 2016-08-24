@@ -11,5 +11,49 @@
     <packaging>jar</packaging>
     <artifactId>dubbo-dao</artifactId>
 
+    <dependencies>
+    <dependency>
+        <groupId>cn.zw.dubbo-module</groupId>
+        <artifactId>dubbo-entity</artifactId>
+        <version>${dubbo.entity.version}</version>
+    </dependency>
 
+        <!-- mybatis核心包 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+
+
+        <!-- mybatis/spring包 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+        <!-- mysql驱动包 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+
+
+        <!--  mybatis 分页插件 -->
+
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>4.0.2</version>
+        </dependency>
+
+
+
+
+
+    </dependencies>
 </project>

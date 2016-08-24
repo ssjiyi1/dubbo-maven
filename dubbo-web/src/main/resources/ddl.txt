@@ -1,0 +1,11 @@
+#创建学生表
+CREATE TABLE `t_student` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `uname` varchar(255) DEFAULT NULL,
+  `pwd` varchar(255) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+INSERT INTO `test`.`t_student` (`id`, `uname`, `pwd`, `age`, `gender`) VALUES ('1', 'zhangwei', 'zw', '22', '男');

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zw.dao.StudentDao">
+
+
+    <resultMap id="studentResult" type="Student">
+
+            <id column="id" property="id"></id>
+            <result property="uname" column="uname"/>
+            <result property="gender" column="gender"/>
+            <result property="age" column="age"/>
+            <result property="pwd" column="pwd"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="Student" useGeneratedKeys="true" keyProperty="id">
+        INSERT  INTO  t_student (uname,pwd,age,gender) values (#{uname},#{pwd},#{age},#{gender});
+    </insert>
+
+    <select id="findAllStudent" resultMap="studentResult">
+        select * from t_student
+    </select>
+
+    <select id="findByName" resultMap="studentResult"  parameterType="string" >
+        select * from t_student where uname = '${name}'
+    </select>
+
+
+
+</mapper>
