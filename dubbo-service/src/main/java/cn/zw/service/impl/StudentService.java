@@ -21,6 +21,10 @@ public class StudentService implements IStudentService {
     @Autowired
     private StudentDao studentDao;
 
+    public StudentService() {
+        System.out.println(studentDao);
+    }
+
     public void insertStudent(Student student) {
         studentDao.insert(student);
     }

@@ -2,7 +2,7 @@ package cn.zw.controller;
 
 import cn.zw.controller.common.bean.Result;
 import cn.zw.entity.Student;
-import cn.zw.service.IStudentService;
+import cn.zw.facade.service.StudentFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +19,14 @@ import static cn.zw.controller.common.bean.ResultBuild.success;
 public class StudentController {
 
     @Autowired
-    private IStudentService studentService;
+    private StudentFacade studentFacade;
 
     private final Logger LOGGER = LoggerFactory.getLogger(StudentController.class);
 
 
     /**
-     *  添加一个学生
+     * 添加一个学生
+     *
      * @param student
      * @return
      */
@@ -33,10 +34,10 @@ public class StudentController {
     @ResponseBody
     public Result addStudent(Student student) {
         try {
-            studentService.insertStudent(student);
+            studentFacade.insertStudent(student);
             return success(student);
         } catch (Exception e) {
-            LOGGER.error("添加学生失败",e);
+            LOGGER.error("添加学生失败", e);
             return fail();
         }
 
@@ -44,23 +45,25 @@ public class StudentController {
 
 
     /**
-     *   查询所有的学生
+     * 查询所有的学生
+     *
      * @return
      */
     @RequestMapping("/listAll")
     @ResponseBody
     public Result listAll() {
         try {
-            return success(studentService.findAll());
+            return success(studentFacade.findAll());
         } catch (Exception e) {
-            LOGGER.error("获取学生列表出错",e);
+            LOGGER.error("获取学生列表出错", e);
             return fail();
         }
     }
 
     /**
-     *  分页查询学生
-     * @param page 页码
+     * 分页查询学生
+     *
+     * @param page     页码
      * @param pageSize 每页显示的条数
      * @return 分页对象
      */
@@ -68,27 +71,18 @@ public class StudentController {
     @ResponseBody
     public Result page(@RequestParam("page") int page, @RequestParam("rows") int pageSize) {
         try {
-            return success(studentService.pageStudent(page,pageSize));
+            return success(studentFacade.pageStudent(page, pageSize));
         } catch (Exception e) {
-            LOGGER.error("分页获取获取学生列表出错",e);
+            LOGGER.error("分页获取获取学生列表出错", e);
             return fail();
         }
     }
-
-
-
 
 
     @RequestMapping("/index")
     public String index() {
         return "/student/index";
     }
-
-
-
-
-
-
 
 
 }

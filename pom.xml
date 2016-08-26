@@ -22,7 +22,7 @@
 
     <properties>
         <!-- spring版本号 -->
-        <spring.version>4.1.6.RELEASE</spring.version>
+        <spring.version>4.2.5.RELEASE</spring.version>
         <!-- mybatis版本号 -->
         <mybatis.version>3.4.0</mybatis.version>
         <!-- log4j日志文件管理包版本 -->
@@ -34,6 +34,7 @@
         <dubbo.dao.version>1.0-SNAPSHOT</dubbo.dao.version>
         <dubbo.service.version>1.0-SNAPSHOT</dubbo.service.version>
         <dubbo.common.version>1.0-SNAPSHOT</dubbo.common.version>
+        <dubbo.facade-student.version>1.0-SNAPSHOT</dubbo.facade-student.version>
 
 
     </properties>

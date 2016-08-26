@@ -10,15 +10,12 @@
     <!-- 提供方应用信息，用于计算依赖关系 -->
     <dubbo:application name="hello-world-app"  />
 
-
-    <dubbo:registry address="zookeeper://192.168.1.171:2181" />
-
- <!--   <dubbo:registry address="multicast://224.5.6.7:1234" />-->
+    <dubbo:registry address="zookeeper://192.168.1.157:2181" />
 
     <dubbo:protocol name="dubbo" port="20880" />
 
-    <bean id="dubboService" class="cn.zw.dubbo.DubboServiceImpl"/>
-    <dubbo:service interface="cn.zw.dubbo.dao.DubboService" ref="dubboService"/>
+
+    <dubbo:service interface="cn.zw.facade.service.StudentFacade" ref="studentFacadeImpl"/>
 
 
 

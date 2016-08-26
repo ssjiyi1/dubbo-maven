@@ -2,7 +2,7 @@ package cn.zw.controller;
 
 import cn.zw.controller.common.bean.Constants;
 import cn.zw.entity.Student;
-import cn.zw.service.IStudentService;
+import cn.zw.facade.service.StudentFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import java.net.URLEncoder;
 public class LoginController {
 
     @Autowired
-    private IStudentService studentService;
+    private StudentFacade studentFacade;
 
     private final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
@@ -36,14 +36,14 @@ public class LoginController {
                 mav.addObject("info", URLEncoder.encode("用户名不能为空", "utf-8"));
                 return mav;
             }
-            Student student = studentService.findByName(name);
+            Student student = studentFacade.findByName(name);
             if (null == student || !student.getPwd().equals(pwd)) {
                 mav.setViewName("redirect:/system/index");
                 mav.addObject("info", URLEncoder.encode("用户名或者密码错误", "UTF-8"));
                 return mav;
             } else {
                 // 通过session和配置拦截器，判断用户是否登陆
-                request.getSession().setAttribute(Constants._USER_LOGIN_TAG,student);
+                request.getSession().setAttribute(Constants._USER_LOGIN_TAG, student);
             }
         } catch (Exception e) {
             LOGGER.error("登陆失败", e);

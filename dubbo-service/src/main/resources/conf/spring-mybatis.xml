@@ -17,6 +17,9 @@
       http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
 
 
+    <!-- 引入jdbc配置文件 -->
+    <context:property-placeholder location="classpath:conf/jdbc.properties"/>
+
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init"
           destroy-method="close">
         <property name="driverClassName">
@@ -71,8 +74,8 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:conf/mybatis-config.xml"/>
-        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
-        <property name="typeHandlersPackage" value="com.fanqiele.otaproxy.support.orm"/>
+        <property name="mapperLocations" value="classpath:mapper/student.xml"/>
+     <!--   <property name="typeHandlersPackage" value=""/>-->
     </bean>
 
 
@@ -86,7 +89,7 @@
 
 
     <!-- 对数据源进行事务管理 -->
-    <bean name="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <bean name="transactionManager"  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
@@ -104,7 +107,7 @@
         </tx:attributes>
     </tx:advice>
 
-    <aop:config>
+    <aop:config proxy-target-class="true">
         <aop:pointcut id="userService" expression="execution(* cn.zw.service.*.*(..))"/>
         <aop:advisor advice-ref="userTxAdvice" pointcut-ref="userService"/>
     </aop:config>

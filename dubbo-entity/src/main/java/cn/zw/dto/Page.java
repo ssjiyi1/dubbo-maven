@@ -1,14 +1,16 @@
 package cn.zw.dto;
 
+import java.io.Serializable;
 import java.util.List;
 /**
  * @description 分页对象
  * @auther 'Amos'
  * @created 2016/8/5  16:12
  */
-public class Page<T> {
+public class Page<T> implements Serializable{
 
-
+    public Page() {
+    }
 
     private int  page;// 当前页
     private int pageSize; // 每页显示的条数
