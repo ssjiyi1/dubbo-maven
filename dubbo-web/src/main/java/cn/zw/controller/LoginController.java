@@ -1,6 +1,6 @@
 package cn.zw.controller;
 
-import cn.zw.controller.common.bean.Constants;
+import cn.zw.common.web.common.bean.Constants;
 import cn.zw.entity.Student;
 import cn.zw.facade.service.StudentFacade;
 import org.slf4j.Logger;

@@ -10,9 +10,16 @@
         <module>dubbo-entity</module>
         <module>dubbo-dao</module>
         <module>dubbo-service</module>
-        <module>dubbo-common</module>
         <module>dubbo-web</module>
         <module>dubbo-facade-student</module>
+
+        <module>dubbo-common-util</module>
+        <module>dubbo-common-config</module>
+        <module>dubbo-common-web</module>
+
+
+
+
     </modules>
 
     <groupId>cn.zw.dubbo-module</groupId>
@@ -35,6 +42,11 @@
         <dubbo.service.version>1.0-SNAPSHOT</dubbo.service.version>
         <dubbo.common.version>1.0-SNAPSHOT</dubbo.common.version>
         <dubbo.facade-student.version>1.0-SNAPSHOT</dubbo.facade-student.version>
+
+        <dubbo.common-config.version>1.0-SNAPSHOT</dubbo.common-config.version>
+        <dubbo.common-util.version>1.0-SNAPSHOT</dubbo.common-util.version>
+        <dubbo.common-web.version>1.0-SNAPSHOT</dubbo.common-web.version>
+
 
 
     </properties>
@@ -261,7 +273,20 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
         </plugins>
+
+
 
     </build>
 

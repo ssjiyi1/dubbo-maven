@@ -1,6 +1,6 @@
 package cn.zw.controller.filter;
 
-import cn.zw.controller.common.bean.Constants;
+import cn.zw.common.web.common.bean.Constants;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 

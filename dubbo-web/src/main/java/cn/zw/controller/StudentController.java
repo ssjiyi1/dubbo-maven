@@ -1,6 +1,6 @@
 package cn.zw.controller;
 
-import cn.zw.controller.common.bean.Result;
+import cn.zw.common.web.common.bean.Result;
 import cn.zw.entity.Student;
 import cn.zw.facade.service.StudentFacade;
 import org.slf4j.Logger;
@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import static cn.zw.controller.common.bean.ResultBuild.fail;
-import static cn.zw.controller.common.bean.ResultBuild.success;
+import static cn.zw.common.web.common.bean.ResultBuild.*;
+
+
 
 @Controller
 @RequestMapping("/student")

@@ -1,6 +1,7 @@
 package cn.zw.controller;
 
-import cn.zw.controller.common.bean.Result;
+
+import cn.zw.common.web.common.bean.Result;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.springframework.stereotype.Controller;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
 
-import static cn.zw.controller.common.bean.ResultBuild.*;
+import static cn.zw.common.web.common.bean.ResultBuild.*;
 
 /**
  * @description 天气接口

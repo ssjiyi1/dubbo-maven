@@ -1,4 +1,4 @@
-package cn.zw.controller.common.bean;
+package cn.zw.common.web.common.bean;
 
 /**
  * @description web层的基本常量

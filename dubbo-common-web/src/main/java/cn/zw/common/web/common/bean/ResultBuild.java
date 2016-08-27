@@ -1,6 +1,7 @@
-package cn.zw.controller.common.bean;
+package cn.zw.common.web.common.bean;
 
-import cn.zw.controller.common.enums.Status;
+
+import cn.zw.common.web.common.enums.Status;
 
 /**
  * @description 构建返回对象的工具类

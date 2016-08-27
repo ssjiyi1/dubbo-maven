@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>dubbo-facade-student</artifactId>
+    <version>${dubbo.facade-student.version}</version>
 
     <dependencies>
 

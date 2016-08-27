@@ -1,5 +1,5 @@
-<%@ page import="cn.zw.controller.common.bean.Constants" %>
 <%@ page import="cn.zw.entity.Student" %>
+<%@ page import="cn.zw.common.web.common.bean.Constants" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../../../common/jsp/common.jsp" %>
 <html>
