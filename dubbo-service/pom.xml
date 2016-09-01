@@ -57,7 +57,7 @@
     </dependencies>
 
     <build>
-        <finalName>dubbo</finalName>
+        <finalName>dubbo-service-student</finalName>
         <resources>
             <resource>
                 <targetPath>${project.build.directory}/classes</targetPath>
