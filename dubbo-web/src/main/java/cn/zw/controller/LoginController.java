@@ -48,7 +48,7 @@ public class LoginController {
             }
         } catch (Exception e) {
             LOGGER.error("登陆失败", e);
-            mav.setViewName("/system/login");
+            mav.setViewName("redirect:/system/index");
             mav.addObject("info", e.getMessage());
         }
         return mav;
