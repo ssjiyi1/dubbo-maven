@@ -24,8 +24,6 @@ public class LoginController {
     private StudentFacade studentFacade;
 
 
-
-
     private final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
 
