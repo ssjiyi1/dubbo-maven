@@ -14,8 +14,8 @@
             <h1>Welcome</h1>
 
             <form class="form" method="post" action="${ctx}/system/login">
-                <input type="text" name="name" placeholder="用户名...">
-                <input type="password" name="pwd" placeholder="密码...">
+                <input type="text" name="name" placeholder="用户名.......">
+                <input type="password" name="pwd" placeholder="密码......">
                 <button type="submit" id="login-button">登陆</button>
             </form>
 
