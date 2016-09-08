@@ -26,7 +26,7 @@ public class UserLoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
 
-
+        System.out.println("----------------enter filter-------------");
 
         String requestURI = request.getRequestURI();
 
@@ -44,8 +44,8 @@ public class UserLoginInterceptor implements HandlerInterceptor {
         if(null!= request.getSession().getAttribute(Constants._USER_LOGIN_TAG)){
             return true;
         }
-        response.sendRedirect("/system/index?info="+ URLEncoder.encode("用户未登陆获取登陆已过期","UTF-8"));
-//      request.getRequestDispatcher("/system/index?info="+ URLEncoder.encode("用户未登陆获取登陆已过期","UTF-8")).forward(request,response);
+//        response.sendRedirect("/system/index?info="+ URLEncoder.encode("用户未登陆获取登陆已过期","UTF-8"));
+      request.getRequestDispatcher("/system/index?info="+ URLEncoder.encode("用户未登陆获取登陆已过期","UTF-8")).forward(request,response);
         return  false;
 
     }
