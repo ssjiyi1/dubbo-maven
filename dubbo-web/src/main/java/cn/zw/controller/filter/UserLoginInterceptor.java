@@ -44,7 +44,8 @@ public class UserLoginInterceptor implements HandlerInterceptor {
         if(null!= request.getSession().getAttribute(Constants._USER_LOGIN_TAG)){
             return true;
         }
-      request.getRequestDispatcher("/system/index?info="+ URLEncoder.encode("用户未登陆获取登陆已过期","UTF-8")).forward(request,response);
+        response.sendRedirect("/system/index?info="+ URLEncoder.encode("用户未登陆获取登陆已过期","UTF-8"));
+//      request.getRequestDispatcher("/system/index?info="+ URLEncoder.encode("用户未登陆获取登陆已过期","UTF-8")).forward(request,response);
         return  false;
 
     }
