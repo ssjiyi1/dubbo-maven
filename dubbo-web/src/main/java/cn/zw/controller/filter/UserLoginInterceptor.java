@@ -25,9 +25,6 @@ public class UserLoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-
-        System.out.println("----------------enter filter-------------");
-
         String requestURI = request.getRequestURI();
 
         if (requestURI.endsWith(".css")|| // 资源文件不验证

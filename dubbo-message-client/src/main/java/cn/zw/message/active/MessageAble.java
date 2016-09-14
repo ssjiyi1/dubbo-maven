@@ -7,8 +7,6 @@ package cn.zw.message.active;
  */
 public interface MessageAble {
 
-    /**
-     *  监听消息
-     */
-    void  listener();
+
+
 }

@@ -409,7 +409,7 @@
 
 	// DATA-API
 
-	$(document).on('mousedown.fu.spinbox.data-api', '[data-initialize=spinbox]', function (e) {
+	$(document).on('mousedown.fu.spinbox.data-client', '[data-initialize=spinbox]', function (e) {
 		var $control = $(e.target).closest('.spinbox');
 		if ( !$control.data('fu.spinbox') ) {
 			$control.spinbox($control.data());

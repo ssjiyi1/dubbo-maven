@@ -6,7 +6,7 @@
  *
  * @param {String} name
  * @return {Object} exports
- * @api public
+ * @client public
  */
 
 function require(name) {
@@ -33,7 +33,7 @@ require.modules = {};
  *
  * @param {String} name
  * @param {Function} definition
- * @api private
+ * @client private
  */
 
 require.register = function (name, definition) {
@@ -47,7 +47,7 @@ require.register = function (name, definition) {
  *
  * @param {String} name
  * @param {Generic} exports
- * @api private
+ * @client private
  */
 
 require.define = function (name, exports) {
@@ -66,7 +66,7 @@ module.exports = Emitter;
 /**
  * Initialize a new `Emitter`.
  *
- * @api public
+ * @client public
  */
 
 function Emitter(obj) {
@@ -78,7 +78,7 @@ function Emitter(obj) {
  *
  * @param {Object} obj
  * @return {Object}
- * @api private
+ * @client private
  */
 
 function mixin(obj) {
@@ -94,7 +94,7 @@ function mixin(obj) {
  * @param {String} event
  * @param {Function} fn
  * @return {Emitter}
- * @api public
+ * @client public
  */
 
 Emitter.prototype.on =
@@ -112,7 +112,7 @@ Emitter.prototype.addEventListener = function(event, fn){
  * @param {String} event
  * @param {Function} fn
  * @return {Emitter}
- * @api public
+ * @client public
  */
 
 Emitter.prototype.once = function(event, fn){
@@ -136,7 +136,7 @@ Emitter.prototype.once = function(event, fn){
  * @param {String} event
  * @param {Function} fn
  * @return {Emitter}
- * @api public
+ * @client public
  */
 
 Emitter.prototype.off =
@@ -201,7 +201,7 @@ Emitter.prototype.emit = function(event){
  *
  * @param {String} event
  * @return {Array}
- * @api public
+ * @client public
  */
 
 Emitter.prototype.listeners = function(event){
@@ -214,7 +214,7 @@ Emitter.prototype.listeners = function(event){
  *
  * @param {String} event
  * @return {Boolean}
- * @api public
+ * @client public
  */
 
 Emitter.prototype.hasListeners = function(event){

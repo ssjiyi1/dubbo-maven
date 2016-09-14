@@ -22,18 +22,19 @@ import static cn.zw.common.web.common.bean.ResultBuild.*;
 public class WeatherController {
 
 
-    String url = "http://api.k780.com:88/?app=weather.today&weaid=265&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
+    String url = "http://client.k780.com:88/?app=weather.today&weaid=265&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
 
 
     @RequestMapping("/get")
     @ResponseBody
     public Result getWeather() {
-        HttpClient httpClient = new  HttpClient();
+//        HttpClient httpClient = new  HttpClient();
         try {
-            GetMethod get = new GetMethod(url);
-            httpClient.executeMethod(get);
-            return  success(new String(get.getResponseBody(),"UTF-8"));
-        } catch (IOException e) {
+//            GetMethod get = new GetMethod(url);
+//            httpClient.executeMethod(get);
+//            return  success(new String(get.getResponseBody(),"UTF-8"));
+            return  success(new String("{'name':'网络不通'}"));
+        } catch (Exception e) {
             e.printStackTrace();
             return  fail(e.getMessage());
         }

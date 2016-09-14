@@ -11,6 +11,8 @@ import cn.zw.common.web.common.enums.Status;
 public class ResultBuild {
 
 
+    public static final String SUCCESS_OK = "ok";
+
     /**
      *  请求成功
      * @param data

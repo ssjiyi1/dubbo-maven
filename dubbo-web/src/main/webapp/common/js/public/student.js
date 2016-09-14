@@ -37,7 +37,6 @@
         if(direction === undefined){
             direction = "left";
         }
-        console.log(rightPx + "---" + direction);
         if(direction=='left'){
             rightPx += 10;
             if(rightPx >=600){
@@ -70,10 +69,14 @@
             if (status) {
                 getData(data, function (rdata) {
                     var weatherinfo = rdata.result;
-                    var city = weatherinfo.citynm;
-                    var wind = weatherinfo.wind;
-                    var temp = weatherinfo.temperature_curr;
-                    var time = weatherinfo.days;
+                    var city = "成都";
+                    var wind = "西南风";
+                    var temp = "20℃";
+                    var time = "今天";
+                    //var city = weatherinfo.citynm;
+                    //var wind = weatherinfo.wind;
+                    //var temp = weatherinfo.temperature_curr;
+                    //var time = weatherinfo.days;
                     var html = "城市:" + city + "&nbsp;风向:" + wind + "&nbsp;温度:" + temp + "&nbsp;更新时间:" + time;
                     $("#weather").html(html);
                     setInterval(moveDiv, 500,'weather');
@@ -81,7 +84,9 @@
                 })
             }
         });
-    }
+    };
+
+
 
 
     function listTableStudent() {

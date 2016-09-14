@@ -77,7 +77,9 @@
             当前登陆用户:
             <%=  ((Student)request.getSession().getAttribute(Constants._USER_LOGIN_TAG)).getUname()  %>
         </h5>
-
+        <div style="position: absolute;right: 0px;top: 0px;;">
+            <input type="button" value="赞一下" onclick="javascript:sendNotify();" />
+        </div>
         <div id="weather" style="position: absolute; right: 10px;bottom: 10px;"></div>
 
 
@@ -119,7 +121,26 @@
 
 
 
+<script type="text/javascript">
 
+
+    /**
+     *  发送通知信息
+     */
+    function sendNotify(){
+        var enter_data=prompt("请输入点什么吧...","么么哒");//将输入的内容赋给变量 name ，
+        if(enter_data){
+            ///*getWebRootPath()*/+
+            $.GetHttp( "/web/praise/add?data="+name, function (data, status) {
+            });
+
+
+        }
+
+    }
+
+
+</script>
 
 
 

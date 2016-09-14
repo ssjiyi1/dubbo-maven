@@ -331,7 +331,7 @@
  /* TYPEAHEAD DATA-API
   * ================== */
 
-  $(document).on('focus.bs_typeahead.data-api', '[data-provide="bs_typeahead"]', function (e) {
+  $(document).on('focus.bs_typeahead.data-client', '[data-provide="bs_typeahead"]', function (e) {
     var $this = $(this)
     if ($this.data('bs_typeahead')) return
     $this.bs_typeahead($this.data())

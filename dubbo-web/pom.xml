@@ -31,6 +31,11 @@
             <version>${dubbo.common-web.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>cn.zw.dubbo-module</groupId>
+            <artifactId>dubbo-message-client</artifactId>
+            <version>${dubbo.message-client.version}</version>
+        </dependency>
 
 
         <dependency>

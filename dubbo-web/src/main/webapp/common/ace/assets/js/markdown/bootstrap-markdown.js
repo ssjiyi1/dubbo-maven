@@ -1388,7 +1388,7 @@
   }
 
   $(document)
-    .on('click.markdown.data-api', '[data-provide="markdown-editable"]', function (e) {
+    .on('click.markdown.data-client', '[data-provide="markdown-editable"]', function (e) {
       initMarkdown($(this))
       e.preventDefault()
     })

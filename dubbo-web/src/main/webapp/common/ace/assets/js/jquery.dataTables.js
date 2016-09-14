@@ -11515,7 +11515,7 @@
 		/**
 		 * Search delay option. This will throttle full table searches that use the
 		 * DataTables provided search input element (it does not effect calls to
-		 * `dt-api search()`, providing a delay before the search is made.
+		 * `dt-client search()`, providing a delay before the search is made.
 		 *  @type integer
 		 *  @default 0
 		 *
@@ -13688,7 +13688,7 @@
 		 *    // Ordering using `input` node values
 		 *    $.fn.dataTable.ext.order['dom-text'] = function  ( settings, col )
 		 *    {
-		 *      return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+		 *      return this.client().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
 		 *        return $('input', td).val();
 		 *      } );
 		 *    }
