@@ -1,4 +1,5 @@
-import cn.zw.message.active.*;
+import cn.zw.duubo.message.common.MessageType;
+import cn.zw.message.active.MessageConsumerAble;
 import cn.zw.message.active.local.LocalActiveMqListener;
 
 /**
