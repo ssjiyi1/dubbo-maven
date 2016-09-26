@@ -3,7 +3,6 @@ package cn.zw.controller;
 import cn.zw.common.web.common.bean.Constants;
 import cn.zw.entity.Student;
 import cn.zw.facade.service.StudentFacade;
-import cn.zw.message.active.client.MessageProducerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
