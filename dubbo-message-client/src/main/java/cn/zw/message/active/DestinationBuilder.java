@@ -1,10 +1,10 @@
 package cn.zw.message.active;
 
+import cn.zw.duubo.message.common.MessageType;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.activemq.command.ActiveMQTopic;
 
 import javax.jms.Destination;
-import javax.jms.Session;
 
 /**
  * @description activemq消息类型的构建

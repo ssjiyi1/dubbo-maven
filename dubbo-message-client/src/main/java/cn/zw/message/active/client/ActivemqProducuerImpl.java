@@ -1,7 +1,7 @@
 package cn.zw.message.active.client;
 
+import cn.zw.duubo.message.common.Message;
 import cn.zw.message.active.DestinationBuilder;
-import cn.zw.message.active.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
@@ -27,8 +27,8 @@ public class ActivemqProducuerImpl implements MessageProducerService {
 
     @Override
     public void send(Message message) {
-        Destination destination = DestinationBuilder.getDestination(message.getMessageType());
-        jmsTemplate.send(destination, session -> session.createTextMessage(message.getData().toString()));
-
+//        Destination destination = DestinationBuilder.getDestination(message.getMessageType());
+//        jmsTemplate.send(destination, session -> session.createTextMessage(message.getData().toString()));
+        jmsTemplate.send(session -> session.createTextMessage(message.getData().toString()));
     }
 }

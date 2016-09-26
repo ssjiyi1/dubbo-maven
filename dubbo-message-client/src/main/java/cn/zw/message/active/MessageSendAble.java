@@ -1,5 +1,7 @@
 package cn.zw.message.active;
 
+import cn.zw.duubo.message.common.Message;
+
 /**
  * @description 发送消息的接口
  * @auther 'Amos'

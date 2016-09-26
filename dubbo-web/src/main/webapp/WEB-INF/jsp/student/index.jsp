@@ -131,7 +131,7 @@
         var enter_data=prompt("请输入点什么吧...","么么哒");//将输入的内容赋给变量 name ，
         if(enter_data){
             ///*getWebRootPath()*/+
-            $.GetHttp( "/web/praise/add?data="+name, function (data, status) {
+            $.GetHttp( "/web/praise/add?data="+enter_data, function (data, status) {
             });
 
 

@@ -1,10 +1,11 @@
 package cn.zw.message.active.local;
 
+import cn.zw.duubo.message.common.Message;
 import cn.zw.message.active.DestinationBuilder;
-import cn.zw.message.active.Message;
 import cn.zw.message.cfg.ActiveMqCfg;
 
 import javax.jms.*;
+
 
 /**
  * @description activemq自己的实现

@@ -1,7 +1,7 @@
 package cn.zw.message.active.local;
 
+import cn.zw.duubo.message.common.MessageType;
 import cn.zw.message.active.DestinationBuilder;
-import cn.zw.message.active.MessageType;
 import cn.zw.message.cfg.ActiveMqCfg;
 
 import javax.jms.*;

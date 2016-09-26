@@ -2,7 +2,7 @@ package cn.zw.controller;
 
 import cn.zw.common.web.common.bean.Result;
 import cn.zw.common.web.common.bean.ResultBuild;
-import cn.zw.message.active.Message;
+import cn.zw.duubo.message.common.Message;
 import cn.zw.message.active.client.MessageProducerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

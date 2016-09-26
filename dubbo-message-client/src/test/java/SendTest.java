@@ -1,24 +1,24 @@
-import cn.zw.message.active.*;
+import cn.zw.duubo.message.common.Message;
 import cn.zw.message.active.local.LocalActiveMessageSend;
 
 /**
- * @description 测试类
+ * @description 发送测试类
  * @auther 'Amos'
- * @created 2016/9/12  12:00
+ * @created 2016/9/19  15:29
  */
 public class SendTest {
 
 
     public static void main(String[] args) {
 
-        send();
-    }
 
-    private static void send() {
-        Message message = new Message("hello world");
-        MessageSendAble messageAble = new LocalActiveMessageSend();
-        messageAble.send(message);
-    }
+        LocalActiveMessageSend localActiveMessageSend = new LocalActiveMessageSend();
+        Message message = new Message("aaabbbbcc");
+        localActiveMessageSend.send(message);
 
+
+
+
+    }
 
 }
