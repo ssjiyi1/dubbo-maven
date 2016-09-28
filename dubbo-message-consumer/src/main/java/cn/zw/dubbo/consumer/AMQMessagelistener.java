@@ -22,6 +22,7 @@ public class AMQMessagelistener implements SessionAwareMessageListener {
 
         ActiveMQTextMessage msg = (ActiveMQTextMessage) message;
         System.out.println(msg + "=================>" +msg.getText());
+        System.out.println(1/0);
 
 
     }

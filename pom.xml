@@ -9,7 +9,7 @@
     <modules>
         <module>dubbo-entity</module>
         <module>dubbo-dao</module>
-        <module>dubbo-service</module>
+        <module>dubbo-service-student</module>
         <module>dubbo-web</module>
         <module>dubbo-facade-student</module>
 
@@ -19,6 +19,7 @@
         <module>dubbo-message-client</module>
         <module>dubbo-common-message</module>
         <module>dubbo-message-consumer</module>
+        <module>dubbo-common-redis</module>
 
 
     </modules>
@@ -37,10 +38,11 @@
         <slf4j.version>1.7.12</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
         <aspectj.version>1.8.6</aspectj.version>
+        <jedis.version>2.9.0</jedis.version>
 
         <dubbo.entity.version>1.0-SNAPSHOT</dubbo.entity.version>
         <dubbo.dao.version>1.0-SNAPSHOT</dubbo.dao.version>
-        <dubbo.service.version>1.0-SNAPSHOT</dubbo.service.version>
+        <dubbo.service-student.version>1.0-SNAPSHOT</dubbo.service-student.version>
         <dubbo.common.version>1.0-SNAPSHOT</dubbo.common.version>
         <dubbo.facade-student.version>1.0-SNAPSHOT</dubbo.facade-student.version>
         <dubbo.common-config.version>1.0-SNAPSHOT</dubbo.common-config.version>
@@ -50,7 +52,7 @@
         <dubbo.message-client.version>1.0-SNAPSHOT</dubbo.message-client.version>
 
         <dubbo.common-message.version>1.0-SNAPSHOT</dubbo.common-message.version>
-
+        <dubbo.common-redis.version>1.0-SNAPSHOT</dubbo.common-redis.version>
 
     </properties>
 
@@ -242,7 +244,6 @@
             </dependency>
 
 
-
             <!--  mybatis 分页插件 -->
 
             <dependency>
@@ -269,21 +270,7 @@
                 <artifactId>activemq-core</artifactId>
                 <version>5.7.0</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>activemq-pool</artifactId>
-                <version>5.8.0</version>
-            </dependency>
 
-
-
-
-            <!-- jms-->
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>activemq-all</artifactId>
-                <version>5.9.0</version>
-            </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-pool</artifactId>
@@ -295,11 +282,14 @@
                 <version>${spring.version}</version>
             </dependency>
 
+
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+
         </dependencies>
-
-
-
-
 
 
     </dependencyManagement>
@@ -328,9 +318,7 @@
         </plugins>
 
 
-
     </build>
-
 
 
 </project>

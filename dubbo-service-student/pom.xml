@@ -10,8 +10,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
-    <artifactId>dubbo-service</artifactId>
-    <version>${dubbo.service.version}</version>
+    <artifactId>dubbo-service-student</artifactId>
+    <version>${dubbo.service-student.version}</version>
 
 
 
