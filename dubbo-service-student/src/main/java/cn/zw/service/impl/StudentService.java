@@ -5,6 +5,8 @@ import cn.zw.dto.Page;
 import cn.zw.entity.Student;
 import cn.zw.service.IStudentService;
 import com.github.pagehelper.PageHelper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,8 @@ import java.util.List;
  */
 @Service
 public class StudentService implements IStudentService {
+
+    private static Logger LOGGER = LoggerFactory.getLogger(StudentService.class);
 
     @Autowired
     private StudentDao studentDao;
@@ -40,6 +44,7 @@ public class StudentService implements IStudentService {
 
     @Override
     public Page<Student> pageStudent(int page, int pageSize) {
+        LOGGER.info("enter page student---page:"+page);
         com.github.pagehelper.Page studentPage = PageHelper.startPage(page, pageSize);
         studentDao.findAllStudent();
         return new Page(studentPage);
