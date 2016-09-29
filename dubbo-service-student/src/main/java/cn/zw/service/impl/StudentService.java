@@ -44,7 +44,7 @@ public class StudentService implements IStudentService {
 
     @Override
     public Page<Student> pageStudent(int page, int pageSize) {
-        LOGGER.info("enter page student---page:"+page);
+        LOGGER.info("enter page student---page:${1},",page);
         com.github.pagehelper.Page studentPage = PageHelper.startPage(page, pageSize);
         studentDao.findAllStudent();
         return new Page(studentPage);
