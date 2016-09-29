@@ -44,6 +44,7 @@ public class LoginController {
                 return mav;
             } else {
                 // 通过session和配置拦截器，判断用户是否登陆
+                //
                 request.getSession().setAttribute(Constants._USER_LOGIN_TAG, student);
             }
         } catch (Exception e) {
