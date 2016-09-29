@@ -14,9 +14,12 @@
 
     <dubbo:protocol name="dubbo" port="20880" />
 
-
-    <dubbo:service interface="cn.zw.facade.service.StudentFacade" ref="studentFacadeImpl"/>
-
+    <!-- failover (切换其他服务请求)
+         failfast（非幂等性操作，一次失败，立即返回失败信息 (failover模式下 retry=0 效果一样))
+         failsafe（失败就忽律，继续执行）
+         failback（失败后台记录，定时重发）
+         forking  （并行调用多个服务，一个成功就返回） -->
+    <dubbo:service  interface="cn.zw.facade.service.StudentFacade" ref="studentFacadeImpl" />
 
 
 </beans>
