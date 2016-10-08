@@ -25,10 +25,6 @@ public class StudentService implements IStudentService {
     @Autowired
     private StudentDao studentDao;
 
-    public StudentService() {
-        System.out.println(studentDao);
-    }
-
     public void insertStudent(Student student) {
         studentDao.insert(student);
     }
@@ -44,7 +40,7 @@ public class StudentService implements IStudentService {
 
     @Override
     public Page<Student> pageStudent(int page, int pageSize) {
-        LOGGER.info("enter page student---page:${1},",page);
+        LOGGER.info("enter page student---page:{}",page);
         com.github.pagehelper.Page studentPage = PageHelper.startPage(page, pageSize);
         studentDao.findAllStudent();
         return new Page(studentPage);
