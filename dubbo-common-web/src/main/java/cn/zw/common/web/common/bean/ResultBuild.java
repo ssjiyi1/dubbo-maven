@@ -19,7 +19,7 @@ public class ResultBuild {
      * @return
      */
     public  static Result success(Object data){
-        Result result = new Result(Status.SUCCESS,data);
+        Result result =  new Result(Status.SUCCESS,data);
         return  result;
     }
 
