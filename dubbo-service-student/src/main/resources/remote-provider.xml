@@ -10,7 +10,7 @@
     <!-- 提供方应用信息，用于计算依赖关系 -->
     <dubbo:application name="dubbo-student-provider"  />
 
-    <dubbo:registry address="${dubbo_zookeeper_address}" />
+    <dubbo:registry address="${dubbo_zookeeper_address}" register="false" />
 
     <dubbo:protocol name="dubbo" port="20880" />
 
