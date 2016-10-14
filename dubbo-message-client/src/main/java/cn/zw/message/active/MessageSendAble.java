@@ -14,6 +14,6 @@ public interface MessageSendAble extends  MessageAble {
      *  发送消息
      * @param msg
      */
-    void send(Message msg);
+    void send(Message msg,int  type);
 
 }

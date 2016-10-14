@@ -7,6 +7,8 @@ package cn.zw.message.active;
  */
 public interface MessageAble {
 
+    int AUTO_ACK = 1;
 
+    int CLIENT_ACK = 2;
 
 }

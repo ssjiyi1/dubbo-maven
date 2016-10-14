@@ -10,6 +10,7 @@ import cn.zw.message.active.local.LocalActiveMqListener;
 public class ListenerTest {
 
 
+
     public static void main(String[] args) {
         listener();
     }
@@ -17,7 +18,7 @@ public class ListenerTest {
 
     private static void listener() {
         MessageType messageType = MessageType.QUEUE;
-        messageType.setName(MessageType.DEFAULT_NAME);
+        messageType.setName("trans?customer.prefetchSize=2");
         MessageConsumerAble messageConsumerAble = new LocalActiveMqListener();
         messageConsumerAble.Listener(messageType);
 
