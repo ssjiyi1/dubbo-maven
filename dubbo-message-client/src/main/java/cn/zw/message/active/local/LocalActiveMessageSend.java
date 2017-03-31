@@ -15,24 +15,44 @@ import javax.jms.*;
 public class LocalActiveMessageSend extends LocalActiveMqSendAble {
 
 
-    @Override
-    public void send(Message msg,int type) {
 
-        try {   //todo
-            Session session = null;
-            if(type==AUTO_ACK){  // 显然不合理。创建消息就要重新创建factory和connection和session
+
+
+    @Override
+    public void sendTransactionMessage(Message msg) {
+        try {
+            if(null==session){
                 session = ActiveMqCfg.getInstance().getSessionWithAutoACKTransactional();
-            }else if(type==CLIENT_ACK){
-                session = ActiveMqCfg.getInstance().getSessionWithClientACKTransactional();
             }
             Destination destination = DestinationBuilder.getDestination(msg.getMessageType());
             MessageProducer producer = session.createProducer(destination);
             producer.setDeliveryMode(DeliveryMode.PERSISTENT);
             producer.send(destination, session.createTextMessage(msg.getData().toString()));
             session.commit();
-            session.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+
+
+
+    @Override
+    public void sendClinetModel(Message msg, int type) {
+        if(null==session){
+            session = ActiveMqCfg.getInstance().getSessionWithClientACKTransactional(type);
+        }
+        try {
+            Destination destination = DestinationBuilder.getDestination(msg.getMessageType());
+            MessageProducer producer = session.createProducer(destination);
+            producer.setDeliveryMode(DeliveryMode.PERSISTENT);
+            producer.send(destination, session.createTextMessage(msg.getData().toString()));
+        } catch (JMSException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }

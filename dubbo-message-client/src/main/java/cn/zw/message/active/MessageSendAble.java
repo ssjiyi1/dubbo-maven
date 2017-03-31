@@ -14,6 +14,14 @@ public interface MessageSendAble extends  MessageAble {
      *  发送消息
      * @param msg
      */
-    void send(Message msg,int  type);
+    void sendTransactionMessage(Message msg);
+
+
+    /**
+     *  发送消息
+     * @param msg
+     */
+    void sendClinetModel(Message msg,int  type);
+
 
 }

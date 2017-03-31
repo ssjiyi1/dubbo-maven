@@ -18,12 +18,11 @@ public class AMQMessagelistener implements SessionAwareMessageListener {
 
 
     @Override
-    public void onMessage(Message message, Session session) throws JMSException {
+    public void onMessage(Message message, Session c) throws JMSException {
 
         ActiveMQTextMessage msg = (ActiveMQTextMessage) message;
         System.out.println(msg + "=================>" +msg.getText());
-        System.out.println(1/0);
-
+//   sout
 
     }
 }
