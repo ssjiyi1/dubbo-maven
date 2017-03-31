@@ -20,6 +20,7 @@
         <module>dubbo-common-message</module>
         <module>dubbo-message-consumer</module>
         <module>dubbo-common-redis</module>
+        <module>dubbo-test</module>
 
 
     </modules>
